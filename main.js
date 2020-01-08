@@ -12,11 +12,11 @@ const setDate = () => {
 
   //Get Minutes
   const minutes = now.getMinutes();
-  const minutesDegrees = (minutes / 60) * 360 + 90;
+  const minutesDegrees = ((minutes / 60) * 360) + ((seconds/60)*6) + 90;
 
   //Get Hours
   const hours = now.getHours();
-  const hoursDegrees = (hours / 60) * 360 + 90;
+  const hoursDegrees = ((hours / 12) * 360) + ((minutes/60)*30) + 90;
 
   //Display logic
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
