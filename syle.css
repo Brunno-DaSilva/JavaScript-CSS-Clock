@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 
+
+:root {
+    --main-bg: #2a323a;
+    --color-light: #f7f4f4;
+    --color-light-gray: #a7adba;
+    --color-title: #6A7687;
+    --color-steal-blue: #9DC1D9;
+    --details-light-blue: #BEE0EA;
+    --light-highlight-blue: #3edbf0;
+}
+
 html {
     background-image: url("./clock-image.jpg");
     background-size: cover;
@@ -10,13 +21,71 @@ html {
 
   body {
     margin: 0;
+    margin-bottom: 2%;
     font-size: 2rem;
     display: flex;
-    flex: 1;
+    flex-direction: column;
     min-height: 100vh;
     align-items: center;
   }
 
+  /*Header*/
+header{
+    width: 100%;
+}
+.navbar {
+    height: 50px;
+    background-color: var(--main-bg);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--details-light-blue);
+}
+
+.navbar img{
+    width: 25px;
+    height: auto;
+}
+.navbar a{
+   text-decoration: none;
+   color: var(--color-light); 
+   letter-spacing: 1px;
+   padding: 10px;
+   font-size: 15px;
+   font-family: 'Muli', sans-serif;
+}
+.navbar a:hover{
+    color: var(--color-light-gray);
+ }
+
+.navbar-items{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.title h1{
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size:5rem;
+    color: var( --color-steal-blue);
+}
+
+.title h1 i{
+    color: var(--details-light-blue);
+}
+
+/*END- Header*/
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
   .clock {
     width: 300px;
     height: 300px;
@@ -35,7 +104,7 @@ html {
   }
 
   .center{
-    background-color: #000;
+    background-color: var(--details-light-blue);
     position: absolute;
     left: calc(50% - 10px);
     top:  calc(50% - 10px);
@@ -48,7 +117,7 @@ html {
 .second{
     width: 2px;
     height: 120px;
-    background-color:#3edbf0;
+    background-color: var(--light-highlight-blue);
     transform-origin: bottom center;
     border-radius: 4px;
     position: absolute;
@@ -63,7 +132,7 @@ html {
 .hour{
     width: 10px;
     height: 75px;
-    background-color: #000;
+    background-color: var(--main-bg);
     transform-origin: bottom center;
     border-radius: 4px;
     position: absolute;
@@ -76,7 +145,7 @@ html {
 .min{
     width: 5px;
     height: 120px;
-    background-color: #000;
+    background-color: var(--main-bg);
     transform-origin: bottom center;
     border-radius: 4px;
     position: absolute;
@@ -90,10 +159,9 @@ html {
 
   .time{
     position: absolute;
-    top: 5%;
+    top: 70%;
     left: 25%;
     border: none;
-    
     padding: 5px;
     display: block;
     box-shadow: inset 0px 2px 5px rgba(0,0,0,.4);
@@ -105,8 +173,8 @@ html {
 .time span{
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 10px;
-    color:#3edbf0;
-    font-size: 15rem;
+    color: var(--light-highlight-blue);
+    font-size: 10rem;
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
