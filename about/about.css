@@ -1,6 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+
 :root {
+  --main-bg: #343d46;
+  --color-light: #f7f4f4;
+  --color-light-gray: #a7adba;
+  --color-title: #6a7687;
+  --color-steal-blue: #9dc1d9;
+  --details-light-blue: #bee0ea;
+
+  /*CSS Variables to be altered*/
+  --base: #2b498b;
+  --spacing: 10px;
+  --blur: 10px;
+  --grayscale: 20%;
   --dark-font-color-title: #173f5f;
   --nave-light-blue: #20639b;
   --teal-green: #3caea3;
@@ -10,11 +24,66 @@
   --light-font-color-title: #c9dded;
   --gray-neutral-color: #63717d;
 }
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Titillium Web", sans-serif;
 }
+
+/*******************************
+*  START - Navigation Style    
+*******************************/
+
+.navbar {
+  height: 50px;
+  background-color: var(--nave-light-blue);
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--details-light-blue);
+}
+
+.navbar img {
+  width: 25px;
+  height: auto;
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--color-light);
+  letter-spacing: 1px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Muli", sans-serif;
+}
+.navbar a:hover {
+  color: var(--farting-yellow);
+}
+
+.navbar-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title h1 {
+  font-family: "Rock Salt", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-title);
+}
+
+.title h1 i {
+  color: var(--details-light-blue);
+}
+
+/*******************************
+*    END - Navigation Style    
+*******************************/
 
 .container {
   display: flex;
