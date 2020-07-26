@@ -12,7 +12,7 @@
 #100DaysOfCode Challange
 ```
 
-## Demo
-https://dasilvabrunotexas.github.io/JavaScript-CSS-Clock/
+## Demo: https://brunno-dasilva.github.io/JavaScript-CSS-Clock/
+
 
 
